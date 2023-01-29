@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+html, body{
+    width: 1920px;
+    height: 100%;
+}
+.mainContainer{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 30% 10% 60%;
+    grid-template-columns: 15% 65% 20%;
+}
+h1{
+    display: inline;
+}
+.mainUserFormClass{
+    text-align: center;
+    grid-row: 1 / 3;
+    border: solid 1px black;
+}
+.mainUserForm{
+    text-align : center;
+    padding : 100px 0 0 0;
+}
+.mainUserJoin{
+    text-align: center;
+}
+.mainTab{
+    text-align : center;
+    padding : 100px 0;
+    border: solid 1px black;
+}
+.mainTabForm{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+}
+.mainSupTabForm{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-items: center;
+}
+.mainTabBtn{
+    all: unset;
+}
+.logout{
+    all: unset;
+}
+.mainAdvertising{
+    text-align : center;
+    padding : 100px 0;
+    border: solid 1px black;
+}
+.mainSupTab{
+    grid-column: 2 / 4;
+    border: solid 1px black;
+    padding-top: 30px;
+    text-align: center;
+}
+.mainCommunity{
+    grid-column: 1 / 4;
+    border: solid 1px black;
+}
+.communityCreate{
+    font-size: 20px;
+}
+.nomalCommunityCreateBtn{
+    all: unset;
+}
+.communityCreate{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    text-align: center;
+    height: 50px;
+    align-items: center;
+}
+.modalXButton{
+    all: unset;
+    cursor: pointer;
+    padding-right: 1400px;
+    padding-left:  -300px;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalOverlay{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.modalContent{
+    background-color: white;
+    position: fixed;
+    padding-right: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    width: 80%;
+    height: 80%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.modalH1{
+    margin: 0;
+}
+.hidden{
+    display: none;
+}
+.joinInput{
+    border: 1px solid black;
+    border-radius: 3px;
+    line-height: 35px;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.wrapper {
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.joinDiv {
+    padding-top: 3px;
+    padding-bottom: 8px;
+}
+
+.title {
+    text-align: center;
+    font-weight: 700;
+}
+
+.email input {
+    width: 100%;
+}
+.id input {
+    width: 100%;
+}
+
+.name input {
+    width: 100%;
+}
+
+.password input {
+    width: 100%;
+}
+.add1 input{
+    width: 100%;
+}
+
+.Animal {
+    text-align: center;
+}
+
+.signUp button {
+    width: 100%;
+    cursor:pointer;
+}
+
+.joinButton{
+    cursor: pointer;
+    height: 30px;
+}
+.mainUserFormDiv{
+    padding: 100px 0;
+    text-align: center;
+}

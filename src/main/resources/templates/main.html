@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈화면</title>
+</head>
+<link th:href="@{/css/main.css}" rel="stylesheet">
+<body>
+<div class="mainContainer">
+    <div class="mainUserFormClass">
+        <form action="/userMain" method="post" class="mainUserForm">
+            <input type="text" name="userId" placeholder="아이디를 입력하세요."><br>
+            <input type="password" name="userPw" placeholder="패스워드를 입력하세요."><br>
+            <button type="submit">로그인</button>
+        </form>
+        <button class="mainUserJoin" id="join">회원가입</button>
+    </div>
+    <div class="mainTab">
+        <form action="" method="get" class="mainTabForm">
+            <h2 class="mainTabH2"><button class="mainTabHome mainTabBtn" type="submit">홈</button></h2>
+            <h2 class="mainTabH2"><button class="mainTabBreeding mainTabBtn" type="submit">사육정보</button></h2>
+            <h2 class="mainTabH2"><button class="mainTabAdoptAndSell mainTabBtn" type="submit">입양 및 분양</button></h2>
+            <h2 class="mainTabH2"><button class="mainTabProduct mainTabBtn" type="submit">용품</button></h2>
+            <h2 class="mainTabH2"><button class="mainTabUserType mainTabBtn" type="submit">회원 등급</button></h2>
+            <h2 class="mainTabH2"><a th:href="@{/Diary}" class="mainTabDiary mainTabBtn">일기</a></h2>
+        </form>
+    </div>
+    <div class="mainAdvertising">
+        <h1>광고</h1>
+    </div>
+    <div class="mainSupTab">
+        <form action="" method="get" class="mainSupTabForm">
+            <h2 class="mainSupTabH2"><button class="mainSupTabCommunity mainTabBtn">일반 커뮤니티</button></h2>
+            <h2 class="mainSupTabH2"><button class="mainSupTabUpdate mainTabBtn">업데이트 정보</button></h2>
+        </form>
+    </div>
+    <div class="modal hidden">
+        <div class="modalOverlay"></div>
+        <div class="modalContent">
+            <button class="modalXButton">❌</button>
+            <div class="wrapper joinDiv">
+                <div class="title joinDiv"><h1 style="font-size: 21px;">회원가입</h1></div>
+                <div class="title joinDiv">
+                    <form action="/mainForm" method="post">
+                        <div class="id joinDiv">
+                            <input type="text" name="userId" class="joinInput" placeholder="아이디를 입력하세요.">
+                        </div>
+                        <div class="password joinDiv">
+                            <input type="password" class="joinInput" name="userPw" placeholder="비밀번호를 입력하세요.">
+                        </div>
+                        <div class="name joinDiv">
+                            <input type="text" class="joinInput" name="userName" placeholder="이름을 입력하세요.">
+                        </div>
+                        <div class="email joinDiv">
+                            <input type="email" class="joinInput" name="userEmail" placeholder="Email을 입력하세요.">
+                        </div>
+                        <div class="add1 joinDiv">
+                            <input type="text" name="userAddress" class="joinInput" placeholder="주소를 입력하세요.">
+                        </div>
+                        <div class="Animal joinDiv">
+                            <input type="checkbox" class="joinInput" name="userAnimalMammal">포유류
+                            <input type="checkbox" class="joinInput" name="userAnimalBird">조류
+                            <input type="checkbox" class="joinInput" name="userAnimalReptiles">파충류
+                            <input type="checkbox" class="joinInput" name="userAnimalAmphibian">양서류
+                            <input type="checkbox" class="joinInput" name="userAnimalFish">어류
+                            <input type="checkbox" class="joinInput" name="userAnimalArthropod">절지류
+                        </div>
+                        <div class="line joinDiv">
+                            <hr>
+                        </div>
+                        <div class="signUp joinDiv">
+                            <button class="joinButton" type="submit">가입하기</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const openButton = document.getElementById("join");
+    const modal = document.querySelector(".modal");
+    const overlay = modal.querySelector(".modalOverlay");
+    const closeBtn = modal.querySelector("button");
+    const openModal = () => {
+        modal.classList.remove("hidden");
+    }
+    const closeModal = () => {
+        modal.classList.add("hidden");
+    }
+    overlay.addEventListener("click", closeModal);
+    closeBtn.addEventListener("click", closeModal);
+    openButton.addEventListener("click", openModal);
+</script>
+
+</body>
+
+</html>

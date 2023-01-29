@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+html, body{
+    width: 1920px;
+    height: 100%;
+}
+.diaryContainer{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 15% 15% 60% 10%;
+    grid-template-rows: 10% 80% 10%;
+}
+.diaryImg{
+    grid-row: 1 / 4;
+    border: solid 1px black;
+}
+.diaryMyAnimals{
+    grid-row: 1 / 4;
+    border: solid 1px black;
+}
+.registration{
+    grid-column: 3 / 5;
+    border: solid 1px black;
+}
+.diaryContent{
+    grid-column: 3 / 5;
+    border: solid 1px black;
+}
+.diaryContentPage{
+    border: solid 1px black;
+}
+.mainHome{
+    border: solid 1px black;
+}
+.diaryH1{
+    padding: 30px 0;
+    text-align: center;
+}
+.diaryHomeA{
+    color: black;
+    text-decoration: none;
+}
+.diaryRegistration{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.diaryFormBtn{
+    all: unset;
+    text-align : center;
+    padding: 25px 0;
+}

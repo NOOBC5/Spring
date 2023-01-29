@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>홈화면</title>
+</head>
+<link th:href="@{/css/main.css}" rel="stylesheet">
+<body>
+<div class="mainContainer">
+  <div class="mainUserFormClass">
+    <div class="mainUserFormDiv">
+      <h1 th:text="${session.userName}"></h1>
+      <h1>님</h1>
+      <h3>환영합니다.</h3>
+      <button><a href="/logout" class="logout">로그아웃</a></button>
+    </div>
+  </div>
+  <div class="mainTab">
+    <div class="mainTabForm">
+      <h2 class="mainTabH2"><a th:href="@{/mainTabHome}" class="mainTabHome mainTabBtn" type="submit">홈</a></h2>
+      <h2 class="mainTabH2"><a class="mainTabBreeding mainTabBtn" type="submit">사육정보</a></h2>
+      <h2 class="mainTabH2"><a class="mainTabAdoptAndSell mainTabBtn" type="submit">입양 및 분양</a></h2>
+      <h2 class="mainTabH2"><a class="mainTabProduct mainTabBtn" type="submit">용품</a></h2>
+      <h2 class="mainTabH2"><a class="mainTabUserType mainTabBtn" type="submit">회원 등급</a></h2>
+      <h2 class="mainTabH2"><a th:href="@{/Diary}" class="mainTabDiary mainTabBtn">일기</a></h2>
+    </div>
+  </div>
+  <div class="mainAdvertising">
+    <h1>광고</h1>
+  </div>
+  <div class="mainSupTab">
+    <div class="mainSupTabForm">
+      <h2 class="mainSupTabH2"><a th:href="@{homeSupTabCommunity}" class="mainSupTabCommunity mainTabBtn">일반 커뮤니티</a></h2>
+      <h2 class="mainSupTabH2"><a class="mainSupTabUpdate mainTabBtn">업데이트 정보</a></h2>
+    </div>
+    <div class="communityCreate">
+      <div>검색</div>
+      <form action="">
+        <button class="communityCreateBtn" type="submit">글작성</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal hidden">
+    <div class="modalOverlay"></div>
+    <div class="modalContent">
+      <button class="modalXButton">❌</button>
+      <div class="wrapper joinDiv">
+        <div class="title joinDiv"><h1 style="font-size: 21px;">회원가입</h1></div>
+        <div class="title joinDiv">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  const openButton = document.getElementById("join");
+  const modal = document.querySelector(".modal");
+  const overlay = modal.querySelector(".modalOverlay");
+  const closeBtn = modal.querySelector("button");
+  const openModal = () => {
+    modal.classList.remove("hidden");
+  }
+  const closeModal = () => {
+    modal.classList.add("hidden");
+  }
+  overlay.addEventListener("click", closeModal);
+  closeBtn.addEventListener("click", closeModal);
+  openButton.addEventListener("click", openModal);
+</script>
+</body>
+
+</html>
