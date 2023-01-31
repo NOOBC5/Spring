@@ -82,12 +82,30 @@ public class MemberController {
         }
     }
 
-    @PostMapping("/mainTabHome")
-    public String communitySave(@ModelAttribute NomalCommunityDTO nomalCommunityDTO){
-        System.out.println("nomalCommunityDTO = "+ nomalCommunityDTO);
-        nomalCommunityService.save(nomalCommunityDTO);
+    @PostMapping("/nomalCommunityCreate")
+    public String communitySave(@ModelAttribute NomalCommunityDTO nomalCommunityDTO, MemberDTO memberDTO, HttpSession session){
 
-        return mainTabHome();
+        MemberDTO loginResult = memberService.login(memberDTO);
+        MemberDTO loginManager = memberService.managerLogin(memberDTO);
+
+        if(loginManager != null){
+            //매니저 아이디 login 성공
+            System.out.println("nomalCommunityDTO = "+ nomalCommunityDTO);
+            session.setAttribute("userName", loginResult.getUserName());
+            nomalCommunityService.save(nomalCommunityDTO);
+
+            return mainTabHome();
+        }else if (loginResult != null){
+            //일반 회원 아이디 login 성공
+            System.out.println("nomalCommunityDTO = "+ nomalCommunityDTO);
+            session.setAttribute("userName", loginResult.getUserName());
+            nomalCommunityService.save(nomalCommunityDTO);
+
+            return mainTabHome();
+        }else {
+            //login 실패
+            return "nomalCommunityCreate";
+        }
     }
 
 }

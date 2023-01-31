@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <title>일반 커뮤니티 글작성페이지</title>
 </head>
-<link th:href="@{/css/main.css}" rel="stylesheet">
+<link th:href="@{/css/nomalCommunityCreate.css}" rel="stylesheet">
 <body>
-  <form action="/mainTabHome" method="post">
-    writer: <p th:text="${session.userName}"></p>
-    title: <input type="text" name="title"><br>
-    content: <textarea name="content"></textarea><br>
-    <button type="submit">글작성</button>
-  </form>
+    <a th:href="@{homeSupTabCommunity}" class="back">뒤로가기</a>
+    <div class="createCommunity">
+        <form action="/mainTabHome" method="post">
+            <div class="write"><h5>작성자: </h5><h5 th:text="${session.userName}"></h5></div>
+            <input type="text" class="title" name="title" placeholder="제목을 입력하세요."><br>
+            <textarea class="content" name="content" placeholder="내용을 입력하세요."></textarea><br>
+            <button type="submit">글작성</button>
+        </form>
+    </div>
 </body>
 </html>

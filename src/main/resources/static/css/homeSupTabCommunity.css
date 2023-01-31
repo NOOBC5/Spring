@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+html, body{
+    width: 1920px;
+    height: 100%;
+}
+.mainContainer{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 30% 10% 60%;
+    grid-template-columns: 15% 65% 20%;
+}
+h1{
+    display: inline;
+}
+.mainUserFormClass{
+    text-align: center;
+    grid-row: 1 / 3;
+    border: solid 1px black;
+}
+.mainUserForm{
+    text-align : center;
+    padding : 100px 0 0 0;
+}
+.mainTab{
+    text-align : center;
+    padding : 100px 0;
+    border: solid 1px black;
+}
+.mainTabForm{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+}
+.mainSupTabForm{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-items: center;
+}
+.mainTabBtn{
+    all: unset;
+}
+.mainAdvertising{
+    text-align : center;
+    padding : 100px 0;
+    border: solid 1px black;
+}
+.mainSupTab{
+    grid-column: 2 / 4;
+    border: solid 1px black;
+    padding-top: 30px;
+    text-align: center;
+}
+.mainCommunity{
+    grid-column: 1 / 4;
+    border: solid 1px black;
+}
+.communityCreate{
+    font-size: 20px;
+}
+.nomalCommunityCreateBtn{
+    all: unset;
+}
+.communityCreate{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    text-align: center;
+    height: 50px;
+    align-items: center;
+}
+.logout{
+    all: unset;
+}
