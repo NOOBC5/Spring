@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>홈화면</title>
 </head>
-<link th:href="@{/css/homeSupTabCommunity.css}" rel="stylesheet">
+<link th:href="@{/css/tabCommunity.css}" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
@@ -41,7 +41,7 @@
   </div>
   <div class="mainCommunity">
     <div class="communityCreate">
-      <div>검색</div>
+      <div class="communitySearch">검색</div>
       <button class="nomalCommunityCreateBtn"><a class="nomalCommunityCreateBtn" th:href="@{nomalCommunityCreate}">글작성</a></button>
     </div>
     <table class="communityTable">
@@ -58,8 +58,7 @@
         <td th:text="*{#temporals.format(board.createTime, 'yyyy-MM-dd HH:mm:ss')}"></td>
       </tr>
     </table>
-  </div>
+    </div>
 </div>
 </body>
-
 </html>

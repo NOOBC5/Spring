@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th>작성자</th>
+    <td th:text="${main.name}"></td>
+  </tr>
+  <tr>
+    <th>조회수</th>
+    <td th:text="${main.hist}"></td>
+  </tr>
+  <tr>
+    <th>글 생성 시간</th>
+    <td th:text="${main.createTime}"></td>
+  </tr>
+  <tr>
+    <th>제목</th>
+    <td th:text="${main.title}"></td>
+  </tr>
+  <tr>
+    <th>내용</th>
+    <td th:text="${main.content}"></td>
+  </tr>
+</table>
+<button>수정</button>
+</body>
+</html>

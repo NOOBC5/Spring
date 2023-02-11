@@ -63,36 +63,11 @@ h1{
 }
 .communityCreate{
     font-size: 20px;
+    border: solid 1px black;
 }
 .nomalCommunityCreateBtn{
     all: unset;
 }
-.communityCreate{
-    display: grid;
-    grid-template-columns: 80% 20%;
-    text-align: center;
-    height: 50px;
-    align-items: center;
-    border: solid 1px black;
-}
-.communityTable{
-    width: 1920px;
-}
-.communityTitle{
-    width: 100%;
-}
-th{
-    border: solid 1px black;
-}
-td{
-    text-align: center;
-}
-.communityTags{
-    width: 100%;
-}
-a{
+.logout{
     all: unset;
 }
-.logout{
-     all: unset;
- }

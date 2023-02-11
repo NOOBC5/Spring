@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+html, body{
+    width: 1920px;
+    height: 100%;
+}
+h5{
+    display: inline;
+    text-align: center;
+}
+.createCommunity{
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.name{
+    width: 100%;
+}
+.title{
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+.content{
+    width: 100%;
+    margin-top: 10px;
+    min-height: 300px;
+}
+.back{
+    all: unset;
+}

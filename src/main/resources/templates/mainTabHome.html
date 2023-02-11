@@ -7,6 +7,9 @@
   <title>홈화면</title>
 </head>
 <link th:href="@{/css/mainTabHome.css}" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
 <body>
 <div class="mainContainer">
   <div class="mainUserFormClass">
@@ -33,16 +36,29 @@
   <div class="mainSupTab">
     <div class="mainSupTabForm">
       <h2 class="mainSupTabH2"><a th:href="@{homeSupTabCommunity}" class="mainSupTabCommunity mainTabBtn">일반 커뮤니티</a></h2>
-      <h2 class="mainSupTabH2"><a class="mainSupTabUpdate mainTabBtn">업데이트 정보</a></h2>
+      <h2 class="mainSupTabH2"><a th:href="@{updateTab}" class="mainSupTabUpdate mainTabBtn">업데이트 정보</a></h2>
     </div>
   </div>
   <div class="mainCommunity">
     <div class="communityCreate">
-      <div>검색</div>
+      <div class="communitySearch">검색</div>
       <button class="nomalCommunityCreateBtn"><a class="nomalCommunityCreateBtn" th:href="@{nomalCommunityCreate}">글작성</a></button>
     </div>
+    <table class="communityTable">
+      <tr class="communityTitle">
+        <th>조회수</th>
+        <th>작성자</th>
+        <th>제목</th>
+        <th>작성시간</th>
+      </tr>
+      <tr th:each="board: ${mainCommunityList}" class="communityTags">
+        <td th:text="${board.hist}"></td>
+        <td th:text="${board.name}"></td>
+        <td><a th:href="@{|/${board.id}|}" th:text="${board.title}"></a></td>
+        <td th:text="*{#temporals.format(board.createTime, 'yyyy-MM-dd HH:mm:ss')}"></td>
+      </tr>
+    </table>
   </div>
 </div>
 </body>
-
 </html>

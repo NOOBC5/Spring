@@ -1,6 +1,8 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 html, body{
     width: 1920px;
@@ -12,8 +14,12 @@ html, body{
     grid-template-rows: 30% 10% 60%;
     grid-template-columns: 15% 65% 20%;
 }
+
 h1{
     display: inline;
+}
+a:hover {
+    color:rgb(92, 92, 92);
 }
 .mainUserFormClass{
     text-align: center;

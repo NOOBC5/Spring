@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link th:href="@{/css/updateMainCommunity.css}" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+<body>
+<a th:href="@{/homeSupTabCommunity}" class="back">뒤로가기</a>
+<div class="createCommunity">
+<form action="/tabCommunity" method="post">
+    <input type="hidden" name="id" th:value="${mainUpdate.id}">
+  <input type="text" class="name" name="name" th:value="${mainUpdate?.name}">
+  <input type="text" class="title" name="title" th:value="${mainUpdate.title}">
+  <textarea class="content" name="content" th:value="${mainUpdate.content}"></textarea>
+  <button type="submit">글작성</button>
+</form>
+</div>
+</body>
+</html>

@@ -1,6 +1,8 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 html, body{
     width: 1920px;

@@ -1,6 +1,8 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 html, body{
     width: 1920px;
@@ -15,12 +17,13 @@ h5{
     margin: 0 auto;
     margin-top: 40px;
 }
-.write{
-    text-align: center;
+.name{
+    width: 100%;
 }
 .title{
     width: 100%;
     box-sizing: border-box;
+    margin-top: 10px;
 }
 .content{
     width: 100%;

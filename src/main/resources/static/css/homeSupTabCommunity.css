@@ -1,6 +1,8 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 html, body{
     width: 1920px;
@@ -57,10 +59,10 @@ h1{
 }
 .mainCommunity{
     grid-column: 1 / 4;
-    border: solid 1px black;
 }
 .communityCreate{
     font-size: 20px;
+    border: solid 1px black;
 }
 .nomalCommunityCreateBtn{
     all: unset;
@@ -71,6 +73,24 @@ h1{
     text-align: center;
     height: 50px;
     align-items: center;
+}
+.communityTable{
+    width: 1920px;
+}
+.communityTitle{
+    width: 100%;
+}
+th{
+    border: solid 1px black;
+}
+td{
+    text-align: center;
+}
+.communityTags{
+    width: 100%;
+}
+a{
+    all: unset;
 }
 .logout{
     all: unset;

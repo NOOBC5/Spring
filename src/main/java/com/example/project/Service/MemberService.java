@@ -48,7 +48,7 @@ public class MemberService {
         Optional<MemberEntity> byMemberId =memberRepository.findByUserId(memberDTO.getUserId());
         if(byMemberId.isPresent()){
             MemberEntity memberEntity = byMemberId.get();
-            if(memberEntity.getUserId().equals("root1") || memberEntity.getUserId().equals("root2") || memberEntity.getUserId().equals("root3")){
+            if(memberEntity.getUserId().equals("root")){
                 MemberDTO dto = MemberDTO.toMemberDTO(memberEntity);
                 return dto;
             }else {

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>일반 커뮤니티 글작성페이지</title>
+</head>
+<link th:href="@{/css/mainCommunityCreate.css}" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+<body>
+    <a th:href="@{homeSupTabCommunity}" class="back">뒤로가기</a>
+    <div class="createCommunity">
+        <form action="/tabCommunity" method="post">
+            <input type="text" class="name" name="name" placeholder="작성자이름을 입력하세요">
+            <input type="text" class="title" name="title" placeholder="제목을 입력하세요.">
+            <textarea class="content" name="content" placeholder="내용을 입력하세요."></textarea>
+            <button type="submit">글작성</button>
+        </form>
+    </div>
+</body>
+</html>
